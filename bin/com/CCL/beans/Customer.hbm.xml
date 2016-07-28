@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-6-1 17:09:34 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.CCL.beans.Customer" table="CUSTOMER">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="increment" />
+        </id>
+        <many-to-one name="customerState" class="com.CCL.beans.CustomerState" fetch="join">
+            <column name="CUSTOMER_STATE_ID" />
+        </many-to-one>
+        <many-to-one name="customerType" class="com.CCL.beans.CustomerType" fetch="join">
+            <column name="CUSTOMER_TYPE_ID" />
+        </many-to-one>
+        <property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+        <property name="sex" type="java.lang.String">
+            <column name="SEX" />
+        </property>
+        <property name="birthday" type="java.util.Date">
+            <column name="BIRTHDAY" />
+        </property>
+        <property name="phone" type="java.lang.String">
+            <column name="PHONE" />
+        </property>
+        <property name="password" type="java.lang.String">
+            <column name="PASSWORD" />
+        </property>
+        <property name="email" type="java.lang.String">
+            <column name="EMAIL" />
+        </property>
+        <property name="address" type="java.lang.String">
+            <column name="ADDRESS" />
+        </property>
+        <property name="integral" type="java.lang.Integer">
+            <column name="INTEGRAL" />
+        </property>
+        <property name="money" type="java.lang.Float">
+            <column name="MONEY" />
+        </property>
+        
+            <property name="isShow" type="java.lang.Boolean">
+            <column name="IS_SHOW" default="1"/>
+        </property>
+    </class>
+</hibernate-mapping>

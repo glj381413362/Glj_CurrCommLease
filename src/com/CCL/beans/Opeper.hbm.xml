@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-6-1 17:48:09 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.CCL.beans.Opeper" table="OPE_PER">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="increment" />
+        </id>
+        <one-to-one name="opeUser" class="com.CCL.beans.OpeUser" constrained="true">
+        </one-to-one>
+        <property name="toChange" type="int">
+            <column name="TO_CHANGE" default="1" />
+        </property>
+        <property name="billPrint" type="int">
+            <column name="BILL_PRINT" default="1" />
+        </property>
+        <property name="pointsFor" type="int">
+            <column name="POINT_SFOR" default="1" />
+        </property>
+        <property name="upgrade" type="int">
+            <column name="UPGRADE" default="1" />
+        </property>
+        <property name="reCard" type="int">
+            <column name="RE_CARD" default="1" />
+        </property>
+        <property name="cardTopup" type="int">
+            <column name="CARD_TOPUP" default="1" />
+        </property>
+        <property name="moneyQuery" type="int">
+            <column name="MONEY_QUERY" default="1" />
+        </property>
+        <property name="reInfo" type="int">
+            <column name="RE_INFO" default="1" />
+        </property>
+        <property name="reCordQuery" type="int">
+            <column name="RE_CORD_QUERY" default="1" />
+        </property>
+        <property name="chargingSet" type="int">
+            <column name="CHARGING_SET" default="0" />
+        </property>
+        <property name="discountSet" type="int">
+            <column name="DISCOUNT_SET" default="0" />
+        </property>
+        <property name="carManager" type="int">
+            <column name="CAR_MANAGER" default="0" />
+        </property>
+        <property name="dataBackup" type="int">
+            <column name="DATA_BACKUP" default="1" />
+        </property>
+        <property name="messageTel" type="int">
+            <column name="MESSAGE_TEL" default="1" />
+        </property>
+        
+        <property name="tradingQuery" type="int">
+            <column name="TRADING_QUERY" default="1" />
+        </property>
+        <property name="billDetails" type="int">
+            <column name="BILL_DETAILS" default="0" />
+        </property>
+             <!-- 
+         <property name="isShow" type="java.lang.Boolean">
+            <column name="IS_SHOW" default="1"/>
+        </property> -->   
+    </class>
+</hibernate-mapping>

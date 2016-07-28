@@ -1,0 +1,10 @@
+#Update 'login.rember' value
+#Fri Jun 17 15:21:55 CST 2016
+login.password=111
+enable=false
+key=2b6c02881e9d5969f08a
+login.userName=admin
+login.rember=true
+time=1
+sms.enable=true
+id=admin01
